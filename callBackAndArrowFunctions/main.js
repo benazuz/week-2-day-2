@@ -100,8 +100,33 @@ capitalize("TAYLOR") // returns Taylor
 capitalize("feliSHIA") // returns Felishia
 
 
-// EXERCISE 6 / ARROW FUNCTIONS
+// EXERCISE 6 / ARROW FUNCTIONS:
 
+const determineWeather = temp => {
+    if(temp > 25){
+      return "hot"
+    }
+    return "cold"
+  }
+
+const commentOnWeather = temp => console.log("Its " + determineWeather(temp))
+
+commentOnWeather(30) //returns "It's hot"
+commentOnWeather(22) //returns "It's cold"
+
+
+// EXERICE 7:
+
+const explode = (lightFunc, soundFunc, sound) => {
+    lightFunc()
+    soundFunc(sound)
+}
+
+const shineLight = () => document.getElementById("box").style.backgroundColor = "yellow"
+
+const makeSound = sound => alert(sound)
+
+explode(shineLight, makeSound, "BOOM")
 
 
 
